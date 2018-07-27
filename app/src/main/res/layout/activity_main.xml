@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5e5e5"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/bottom_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#de1"
+        android:gravity="center"
+        android:text="bottomsheetdialog" />
+
+    <TextView
+        android:id="@+id/bottomdialog"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#de11"
+        android:gravity="center"
+        android:text="bottomsheetdialog封装"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_dialog" />
+
+
+    <TextView
+        android:id="@+id/popwindow"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#e5e"
+        android:gravity="center"
+        android:text="popwindos"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomdialog"/>
+
+
+
+    <TextView
+        android:id="@+id/pop_window"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#e5e5"
+        android:gravity="center"
+        android:text="popwindos封装"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popwindow"/>
+
+    <TextView
+        android:id="@+id/dialog"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#e5e5e5"
+        android:gravity="center"
+        android:text="dialog"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pop_window"/>
+
+    <TextView
+        android:id="@+id/custom_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#e5e5"
+        android:gravity="center"
+        android:text="底部dialog"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog"/>
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- android<set>标签代表一系列的帧动画,可以在里面添加动画效果 -->
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <translate
+        android:duration="2000"
+        android:fromYDelta="0"
+        android:toYDelta="50%p" />
+
+    <alpha
+        android:duration="2000"
+        android:fromAlpha="1.0"
+        android:toAlpha="0.0" />
+
+</set>
