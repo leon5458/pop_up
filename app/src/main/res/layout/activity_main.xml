@@ -72,5 +72,17 @@
         app:layout_constraintTop_toBottomOf="@+id/dialog"/>
 
 
+    <TextView
+        android:id="@+id/alertdialog"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#d2d"
+        android:gravity="center"
+        android:text="alertdialog"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_dialog"/>
+
+
 
 </android.support.constraint.ConstraintLayout>

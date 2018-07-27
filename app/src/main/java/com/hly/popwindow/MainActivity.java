@@ -5,12 +5,14 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.arch.lifecycle.ViewModelProvider;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
 import android.location.LocationManager;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
@@ -148,6 +150,32 @@ public class MainActivity extends AppCompatActivity {
                 BottomDialog.setContentView(contentView);
                 BottomDialog.getWindow().setGravity(Gravity.BOTTOM);
                 BottomDialog.show();
+            }
+        });
+
+        //原生的alertdialog
+        findViewById(R.id.alertdialog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog dialog = new AlertDialog.Builder(MainActivity.this).create();
+                dialog.setTitle("温馨提示");
+                dialog.setMessage("信息已修改是否保存");
+
+                Window window = dialog.getWindow();
+                window.setGravity(Gravity.BOTTOM);
+                dialog.setButton(DialogInterface.BUTTON_POSITIVE, "确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+                dialog.setButton(DialogInterface.BUTTON_NEGATIVE, "取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+                dialog.show();
             }
         });
     }
