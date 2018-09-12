@@ -10,12 +10,17 @@
 
 
     <style name="pop_anim_style">
-
         <!-- 指定显示的动画xml -->
         <item name="android:windowEnterAnimation">@anim/popshow_anim</item>
-
         <!-- 指定消失的动画xml -->
         <item name="android:windowExitAnimation">@anim/pophidden_anim</item>
+    </style>
+
+
+    <style name="pop_center">
+        <item name="android:windowEnterAnimation">@anim/pop_show_center</item>
+        <item name="android:windowExitAnimation">@anim/pop_hidden_center</item>
+
     </style>
 
 </resources>

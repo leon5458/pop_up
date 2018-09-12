@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 //        layoutGravity=new CommonPopupWindow.LayoutGravity(CommonPopupWindow.LayoutGravity.ALIGN_LEFT| CommonPopupWindow.LayoutGravity.TO_BOTTOM);
-        layoutGravity = new CommonPopupWindow.LayoutGravity(CommonPopupWindow.LayoutGravity.TO_BOTTOM);
+//        layoutGravity = new CommonPopupWindow.LayoutGravity(CommonPopupWindow.LayoutGravity.TO_BOTTOM);
 
         final BottomSheetDialog dialog = new BottomSheetDialog(MainActivity.this);
         /**
@@ -178,6 +178,28 @@ public class MainActivity extends AppCompatActivity {
                 dialog.show();
             }
         });
+
+        findViewById(R.id.pop_center).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                View contentView = LayoutInflater.from(MainActivity.this).inflate(R.layout.nav_add_item_layout, null);
+                PopupWindow popupWindow = new PopupWindow(contentView);
+                popupWindow.setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
+                popupWindow.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
+                popupWindow.setAnimationStyle(R.style.pop_center);
+                popupWindow.setOutsideTouchable(true);
+                popupWindow.setFocusable(true);
+                popupWindow.showAtLocation(contentView,Gravity.CENTER,0,0);
+                contentView.findViewById(R.id.img).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(MainActivity.this, "点击了", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
+
+
     }
 //    private void showBottomPop() {
 //        // 利用layoutInflater获得View
